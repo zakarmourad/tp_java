@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Client">
+      <content>
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+               <Label layoutX="38.0" layoutY="14.0" prefHeight="17.0" prefWidth="412.0" text="Client" textAlignment="CENTER">
+                  <font>
+                     <Font name="System Bold" size="36.0" />
+                  </font></Label>
+               <Button layoutX="511.0" layoutY="125.0" mnemonicParsing="false" onAction="#DeleteClient" prefHeight="25.0" prefWidth="67.0" text="Delete" />
+               <TextField id="nomcli" fx:id="vNom" layoutX="41.0" layoutY="87.0" promptText="nom" />
+               <TextField id="prenomcli" fx:id="vPrenom" layoutX="244.0" layoutY="87.0" promptText="prenom" />
+               <TextField id="Tcli" fx:id="vTitire" layoutX="41.0" layoutY="149.0" promptText="titre" />
+               <TextField id="Vcli" fx:id="vClient" layoutX="244.0" layoutY="149.0" promptText="version" />
+               <Button layoutX="443.0" layoutY="75.0" mnemonicParsing="false" onAction="#AddClient" prefHeight="25.0" prefWidth="63.0" text="Add" />
+               <Button layoutX="443.0" layoutY="125.0" mnemonicParsing="false" onAction="#UpdateClient" prefHeight="25.0" prefWidth="61.0" text="Update" />
+               <Button layoutX="511.0" layoutY="75.0" mnemonicParsing="false" onAction="#ListClient" prefHeight="25.0" prefWidth="66.0" text="List" />
+                  <TableView fx:id="CLientList" layoutX="29.0" layoutY="193.0" prefHeight="169.0" prefWidth="539.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+            </children>
+         </AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="MedecinList" text="Medecin">
+      <content>
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+               <Label layoutX="41.0" layoutY="26.0" prefHeight="17.0" prefWidth="258.0" text="Medecins" textAlignment="CENTER">
+                  <font>
+                     <Font name="System Bold" size="33.0" />
+                  </font>
+               </Label>
+               <Button layoutX="511.0" layoutY="125.0" mnemonicParsing="false" onAction="#DeleteM" text="Delete" />
+               <TextField id="nomM" layoutX="41.0" layoutY="87.0" promptText="nom" />
+               <TextField id="prenomM" layoutX="244.0" layoutY="87.0" promptText="prenom" />
+               <TextField id="TM" layoutX="41.0" layoutY="149.0" promptText="titre" />
+               <TextField id="versionM" layoutX="244.0" layoutY="149.0" promptText="version" />
+               <Button layoutX="443.0" layoutY="75.0" mnemonicParsing="false" onAction="#AddM" prefHeight="25.0" prefWidth="50.0" text="Add" />
+               <Button layoutX="443.0" layoutY="125.0" mnemonicParsing="false" onAction="#UpdateM" prefHeight="25.0" prefWidth="50.0" text="Update" />
+               <Button layoutX="511.0" layoutY="75.0" mnemonicParsing="false" onAction="#ListM" prefHeight="25.0" prefWidth="50.0" text="List" />
+                  <TableView layoutX="41.0" layoutY="200.0" prefHeight="157.0" prefWidth="515.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+            </children>
+         </AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="RV">
+        <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                 <Label layoutX="41.0" layoutY="26.0" prefHeight="17.0" prefWidth="258.0" text="RV" textAlignment="CENTER">
+                    <font>
+                       <Font name="System Bold" size="33.0" />
+                    </font>
+                 </Label>
+                 <Button layoutX="511.0" layoutY="125.0" mnemonicParsing="false" text="Delete" />
+                 <TextField id="HDebut" layoutX="41.0" layoutY="87.0" promptText="HDebut" />
+                 <TextField id="MDebut" layoutX="244.0" layoutY="87.0" promptText="MDebut" />
+                 <TextField id="HFin" layoutX="41.0" layoutY="149.0" promptText="HFin" />
+                 <TextField id="versionrv" layoutX="244.0" layoutY="149.0" promptText="version" />
+                 <Button layoutX="443.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Add" />
+                 <Button layoutX="443.0" layoutY="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Update" />
+                 <Button layoutX="511.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="List" />
+                 <TextField id="MFin" layoutX="41.0" layoutY="207.0" promptText="MFin" />
+                  <TableView layoutX="211.0" layoutY="194.0" prefHeight="163.0" prefWidth="376.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+              </children>
+           </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
